@@ -1,5 +1,9 @@
-export default function Dashboard({ auth }) {
-    return <>
-        <div>Teste</div>
-    </>
+import Layout from "@/Layout.jsx";
+
+export default function Dashboard() {
+    return (
+        <Layout>
+            teste
+        </Layout>
+    )
 }

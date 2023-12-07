@@ -2,9 +2,9 @@ import './bootstrap';
 import '../css/app.css';
 
 import { createRoot } from 'react-dom/client';
-import { createInertiaApp, usePage } from '@inertiajs/react';
+import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import Layout from "@/Layouts/Layout.jsx";
+import Layout from "@/Layout.jsx";
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -14,7 +14,7 @@ createInertiaApp({
         const page = resolvePageComponent(`./Views/${name}.jsx`, import.meta.glob('./Views/**/*.jsx'));
 
         page.then((module) => {
-            module.default.layout = module.default.layout || Layout
+            module.default.layout = <Layout children={module} />
         });
 
         return page;
