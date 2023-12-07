@@ -10,11 +10,10 @@ export default {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.jsx',
     ],
-
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Overpass', ...defaultTheme.fontFamily.sans],
             },
         },
     },

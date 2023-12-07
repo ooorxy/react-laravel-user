@@ -29,8 +29,8 @@ export default function Topbar () {
                 </>
             }
             <Darkmode iconLight={<Icone iconName="WhiteBalanceSunny"></Icone>}
-                      iconDark={<Icone iconName="WeatherNight"></Icone>}
-            ></Darkmode>
+                      iconDark={<Icone iconName="WeatherNight"></Icone>}>
+            </Darkmode>
         </nav>
     )
 }
