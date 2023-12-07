@@ -9,7 +9,7 @@ export default function Icone ({ iconName, size = 1 }) {
     return (
         <Icon path={icon[`mdi${iconName}`]}
               size={size}
-              className="dark:text-white"
+              className="dark:text-white inline-flex"
         />
     )
 }

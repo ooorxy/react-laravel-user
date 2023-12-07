@@ -9,13 +9,12 @@ import Layout from "@/Layout.jsx";
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
-    title: (title) => `${appName} - ${title}`,
+    title: (title) => `${appName}` + (title ? ` - ${title}` : ''),
     resolve: (name) => {
-        const page = resolvePageComponent(`./Views/${name}.jsx`, import.meta.glob('./Views/**/*.jsx'));
+        const pages = import.meta.glob('./Views/**/*.jsx', { eager: true });
+        let page = pages[`./Views/${name}.jsx`];
 
-        page.then((module) => {
-            module.default.layout = <Layout children={module} />
-        });
+        page.default.layout = page => <Layout children={page} />;
 
         return page;
     },

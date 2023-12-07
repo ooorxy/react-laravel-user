@@ -38,7 +38,7 @@ export default function Darkmode ({iconLight, iconDark}) {
     }
 
     return <>
-        <button type="button" className="ms-6" id="light-button">{iconLight}</button>
-        <button type="button" className="ms-6" id="dark-button">{iconDark}</button>
+        <button type="button" className="btn-toggle" id="light-button">{iconLight}</button>
+        <button type="button" className="btn-toggle" id="dark-button">{iconDark}</button>
     </>
 }
