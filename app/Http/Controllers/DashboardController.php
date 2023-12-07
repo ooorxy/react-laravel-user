@@ -2,16 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request)
     {
-        return Inertia::render('Dashboard');
+        $users = User::selectRaw("
+            id,
+            name,
+            email,
+            created_at,
+            case when active = true then 'Sim'
+                else 'Não'
+            end as active,
+            image
+        ")
+            ->get();
+
+        return Inertia::render('Dashboard', compact('users'));
     }
 }
