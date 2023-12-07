@@ -12,6 +12,6 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return Inertia::render('Welcome');
+        return Inertia::render('Dashboard');
     }
 }
