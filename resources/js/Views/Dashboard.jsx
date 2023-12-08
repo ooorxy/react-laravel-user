@@ -12,7 +12,7 @@ export default function Dashboard() {
                 <table>
                     <thead>
                         <tr>
-                            <th></th>
+                            <th className="hidden xl:block"></th>
                             <th>ID</th>
                             <th>Usuário</th>
                             <th>E-mail</th>
