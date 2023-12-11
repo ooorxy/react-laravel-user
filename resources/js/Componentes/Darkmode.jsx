@@ -1,3 +1,5 @@
+import {Button} from "flowbite-react";
+
 export default function Darkmode ({iconLight, iconDark}) {
     const light = document.getElementById('light-button');
     const dark = document.getElementById('dark-button');
@@ -38,7 +40,7 @@ export default function Darkmode ({iconLight, iconDark}) {
     }
 
     return <>
-        <button type="button" className="btn-toggle" id="light-button">{iconLight}</button>
-        <button type="button" className="btn-toggle" id="dark-button">{iconDark}</button>
+        <Button id="light-button" pill color="gray" size="xs">{iconLight}</Button>
+        <Button id="dark-button" pill color="gray" size="xs">{iconDark}</Button>
     </>
 }

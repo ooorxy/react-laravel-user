@@ -14,6 +14,6 @@ use \App\Http\Controllers;
 |
 */
 
-Route::get('/', [Controllers\DashboardController::class, '__invoke']);
+Route::get('/', [Controllers\DashboardController::class, '__invoke'])->name('dashboard');
 
 require __DIR__.'/auth.php';
