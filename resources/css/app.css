@@ -4,6 +4,10 @@
 
 /* Estilos padrões de tags */
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 h1 {
     @apply text-[1.8rem] h-default;
 }
