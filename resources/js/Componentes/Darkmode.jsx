@@ -40,7 +40,7 @@ export default function Darkmode ({iconLight, iconDark}) {
     }
 
     return <>
-        <Button id="light-button" pill color="gray" size="xs">{iconLight}</Button>
-        <Button id="dark-button" pill color="gray" size="xs">{iconDark}</Button>
+        <Button id="light-button" pill color="light" size="xs">{iconLight}</Button>
+        <Button id="dark-button" pill color="light" size="xs">{iconDark}</Button>
     </>
 }
