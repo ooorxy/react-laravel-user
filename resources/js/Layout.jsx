@@ -1,5 +1,7 @@
 import { Link, Head } from '@inertiajs/react';
 import Topbar from "@/Componentes/Topbar.jsx";
+import {Button} from "flowbite-react";
+import Icone from "@/Componentes/Icone.jsx";
 
 export default function Layout({ children }) {
     return <>
