@@ -1,10 +1,9 @@
-import {Head, usePage} from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 import Icone from "@/Componentes/Icone.jsx";
-import {Avatar, Breadcrumb, Button, Card, Table} from "flowbite-react";
+import { Breadcrumb, Card, Table} from "flowbite-react";
+import WaitingTable from "@/Componentes/WaitingTable.jsx";
 
 export default function Dashboard() {
-    const { users } = usePage().props;
-
     return <>
         <Head title="Dashboard" />
 
@@ -25,6 +24,7 @@ export default function Dashboard() {
                     <Table.HeadCell>Ações</Table.HeadCell>
                 </Table.Head>
                 <Table.Body className="divide-y">
+                    <WaitingTable columns={6} />
                     {/*{*/}
                     {/*    users.map(user => {*/}
                     {/*        const date = new Date(user.created_at).toLocaleDateString('pt-BR');*/}
